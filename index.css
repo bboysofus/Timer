@@ -7,6 +7,11 @@
     font-family: 'Roboto';
 }
 
+::selection{
+    color: white;
+    background-color: white;
+}
+
 body{
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
@@ -23,7 +28,6 @@ body{
     border: 2px yellow solid;
     cursor: move;
     position: absolute;
-    z-index: 9;
 }
 
 header{
@@ -33,7 +37,7 @@ header{
     place-items: center;
 }
 
-#click{
+#clickMe{
     text-decoration: underline;
     cursor: pointer;
 }
@@ -49,4 +53,28 @@ main{
 footer{
     background-color: rgb(55, 0, 255);
     border: 2px solid red;
+    display: grid;
+    place-items: center;
+}
+
+#insp{
+    display: grid;
+    place-items: center;
+    font-size: 3vh;
+}
+
+#insp h1{
+    margin-bottom: 4vh;
+}
+
+#link1{
+    cursor: pointer;
+    color: darkred;
+    text-decoration: underline;
+}
+
+#link2{
+    cursor: pointer;
+    color: darkred;
+    text-decoration: underline;
 }

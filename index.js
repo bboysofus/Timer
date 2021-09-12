@@ -1,6 +1,8 @@
 let timer = document.querySelector('#timer')
 let min = document.querySelector('#min')
 let sek = document.querySelector('#sek')
+let clickMe = document.getElementById("clickMe")
+let allchar = "0123456789ABCDEF"
 
 
 const saetTid = () => {
@@ -63,7 +65,11 @@ function dragElement(elmnt) {
     }
   }
 
-  function skiftFarve(){
-        document.getElementById("ur").style.color = "green"
-        document.getElementById("ur").style.borderColor = "green"
+    function skiftFarve(){
+      let randcol = ""
+      for(let i=0; i<6; i++){
+        randcol += allchar[Math.floor(Math.random()*16)]
+      }
+      document.getElementById("ur").style.color = "#"+randcol
+      document.getElementById("ur").style.borderColor = "#"+randcol
   }
